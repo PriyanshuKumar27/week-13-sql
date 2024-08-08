@@ -1,7 +1,9 @@
-import { Client } from 'pg';
+import { Client } from "pg"
 
 export async function getClient() {
-    const client = new Client("postgres://wzsxsnxg:LHZ9Cv4QoZ1zctxapkOq2ch672-o9UQe@trumpet.db.elephantsql.com/wzsxsnxg");
-    await client.connect();
-    return client;
+  const client = new Client(
+    "postgresql://test_owner:w2yIiYUKZ5Xz@ep-round-recipe-a5t7mxmu.us-east-2.aws.neon.tech/test?sslmode=require"
+  )
+  await client.connect()
+  return client
 }
